@@ -19,7 +19,7 @@ function Test-RegistrySetting {
     Write-Debug "Checking $app ($fullPath) for ${key}: Value = $regValue, Expected = $expectedValue"
 
     if ($regValue -ne $expectedValue) {
-        Write-Output $message
+        Write-Output "$($app) - The Setting of - '$($message)' is incorrect"
     }
 }
 
