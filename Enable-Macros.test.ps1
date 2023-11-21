@@ -24,7 +24,7 @@ function Test-RegistrySetting {
 }
 
 $settings = @(
-    @{ Apps = @("Access", "Excel", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbawarnings"; ExpectedValue = 2; isCommonPath = $true; Message = "Macro Notification Settings | VBA Macro Notification Settings" },
+    @{ Apps = @("Access", "Excel", "MS Project" "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbawarnings"; ExpectedValue = 2; isCommonPath = $true; Message = "Macro Notification Settings | VBA Macro Notification Settings" },
     @{ Apps = @("Access", "Excel", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbadigsigtrustedpublishers"; ExpectedValue = 0; isCommonPath = $true; Message = "Macro Notification Settings | Require Macros to be signed by a trusted publisher" },
     @{ Apps = @("Access", "Excel", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbarequirelmtrustedpublisher"; ExpectedValue = 0; isCommonPath = $true; Message = "Macro Notification Settings | Block certificates from trusted publishers that are only installed in the current user certificate store" },
     @{ Apps = @("Access", "Excel", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbarequiredigsigwithcodesigningeku"; ExpectedValue = 0; isCommonPath = $true; Message = "Macro Notification Settings | Require Extended Key Usage (EKU) for certificates from trusted publishers" },
@@ -36,7 +36,6 @@ $settings = @(
     @{ Apps = @("Excel", "Powerpoint", "Word"); Path = "security"; Key = "accessvbom"; ExpectedValue = 0; isCommonPath = $true;  Message = "Trust access to Visual Basic Project" },
     @{ Apps = @("Excel"); Path = "security"; Key = "excelbypassencryptedmacroscan"; ExpectedValue = 0; isCommonPath = $true;  Message = "Scan encrypted macros in Excel Open XML workbooks | Scan encrypted macros in Excel Open XML workbooks" },
     @{ Apps = @("Excel"); Path = "security"; Key = "xl4macrowarningfollowvba"; ExpectedValue = 0; isCommonPath = $true;  Message = "Macro Notification Settings | Enable Excel 4.0 macros when VBA macros are enabled" },
-    @{ Apps = @("MS Project"); Path = "security"; Key = "vbawarnings"; ExpectedValue = 2; isCommonPath = $true;  Message = "Macro Notification Settings | VBA Macro Notification Settings" },
     @{ Apps = @("Office"); Path = "16.0\common"; Key = "vbaoff"; ExpectedValue = 0; isCommonPath = $false; Message = "Disable VBA for Office applications " },
     @{ Apps = @("Office"); Path = "16.0\common\security"; Key = "macroruntimescanscope"; ExpectedValue = 2; isCommonPath = $false; Message = "Macro Runtime Scan Scope | Macro Runtime Scan Scope" },
     @{ Apps = @("Office"); Path = "16.0\common\trustcenter"; Key = "trustbar"; ExpectedValue = 0; isCommonPath = $false; Message = "Disable all Trust Bar notifications for security issues " },
