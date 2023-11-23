@@ -24,7 +24,7 @@ function Test-RegistrySetting {
 }
 
 $settings = @(
-    @{ Apps = @("Access", "Excel", "MS Project" "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbawarnings"; ExpectedValue = 2; isCommonPath = $true; Message = "Macro Notification Settings | VBA Macro Notification Settings" },
+    @{ Apps = @("Access", "Excel", "MS Project", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbawarnings"; ExpectedValue = 2; isCommonPath = $true; Message = "Macro Notification Settings | VBA Macro Notification Settings" },
     @{ Apps = @("Access", "Excel", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbadigsigtrustedpublishers"; ExpectedValue = 0; isCommonPath = $true; Message = "Macro Notification Settings | Require Macros to be signed by a trusted publisher" },
     @{ Apps = @("Access", "Excel", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbarequirelmtrustedpublisher"; ExpectedValue = 0; isCommonPath = $true; Message = "Macro Notification Settings | Block certificates from trusted publishers that are only installed in the current user certificate store" },
     @{ Apps = @("Access", "Excel", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbarequiredigsigwithcodesigningeku"; ExpectedValue = 0; isCommonPath = $true; Message = "Macro Notification Settings | Require Extended Key Usage (EKU) for certificates from trusted publishers" },
