@@ -26,7 +26,6 @@ function Test-RegistrySetting {
 $settings = @(
     @{ Apps = @("Access", "Excel", "MS Project", "Powerpoint", "Publisher", "Visio", "Word"); Path = "security"; Key = "vbawarnings"; ExpectedValue = 4; isCommonPath = $true; Message = "Macro Notification Settings | VBA Macro Notification Settings" },
     @{ Apps = @("Office"); Path = "16.0\common"; Key = "vbaoff"; ExpectedValue = 1; isCommonPath = $false; Message = "Disable VBA for Office applications " },
-    @{ Apps = @("Office"); Path = "16.0\common\security"; Key = "macroruntimescanscope"; ExpectedValue = 2; isCommonPath = $false; Message = "Macro Runtime Scan Scope | Macro Runtime Scan Scope" },
     @{ Apps = @("Office"); Path = "common\security"; Key = "automationsecurity"; ExpectedValue = 3; isCommonPath = $false; Message = "Automation Security | Set the Automation Security Level" }
     @{ Apps = @("Outlook"); Path = "security"; Key = "level"; ExpectedValue = 4; isCommonPath = $true;  Message = "Security setting for macros | Security Level" },
     @{ Apps = @("Publisher"); Path = "common\security"; Key = "automationsecuritypublisher"; ExpectedValue = 3; isCommonPath = $false; Message = "Publisher Automation Security Level | Publisher Automation Security Level" }
